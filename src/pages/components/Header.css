@@ -1,0 +1,18 @@
+.header {
+    height: 50px;
+    width: 100vw;
+    background-color: darkolivegreen;
+}
+
+.links {
+    display: flex;
+}
+
+.links > a {
+    color: black;
+    height: 25px;
+    width: 100px;
+    text-decoration: none;
+
+}
+
