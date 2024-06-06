@@ -4,7 +4,6 @@ import Header from "./components/Header.jsx";
 function Home() {
     return (
         <div>
-            <Header />
             <h2>Home</h2>
             <p>Bem-vindo à página inicial.</p>
         </div>
