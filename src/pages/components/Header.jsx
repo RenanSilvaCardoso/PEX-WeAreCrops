@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import './Header.css';
 import logo from '../../assets/img/logo.png';
 import { FaBars } from "react-icons/fa";
 
@@ -36,7 +35,9 @@ function Header() {
                 <li class="mx-2 my-6 md:my-0">
                     <Link to="/contact" class="text-xl hover:text-primary duration-500">Contato</Link>
                 </li>
-                <h2 class=""></h2>
+                <li class="mx-2 my-6 md:my-0">
+                    <Link to="/location" class="text-xl hover:text-primary duration-500">Onde estamos</Link>
+                </li>
             </ul>
         </nav>
     </header>
