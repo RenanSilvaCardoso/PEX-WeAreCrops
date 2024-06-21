@@ -1,18 +1,18 @@
-import um from '../assets/img/um.jpg';
-import dois from '../assets/img/dois.jpg';
-import tres from '../assets/img/tres.jpg';
-import quatro from '../assets/img/quatro.jpg';
+import um from '../assets/img/crops1.jpg';
+import dois from '../assets/img/crops2.jpg';
+import tres from '../assets/img/crops3.jpg';
+import quatro from '../assets/img/crops4.jpg';
 
 export default function Location() {
     return (
         <div className="w-full">
             <div className="w-11/12 m-auto py-4 space-y-2">
                 <h1 className="text-2xl font-bold text-center mb-2">Venha nos conhecer!</h1>
-                <div className="w-full flex flex-wrap gap-2">
-                    <img src={um} className="w-2/5 h-auto m-auto"/>
-                    <img src={dois} className="w-2/5 h-auto m-auto"/>
-                    <img src={tres} className="w-2/5 h-auto m-auto"/>
-                    <img src={quatro} className="w-2/5 h-auto m-auto"/>
+                <div className="w-full md:w-10/12 flex flex-wrap gap-1 m-auto">
+                    <img src={um} className="w-2/5 m-auto md:w-1/3 hover:scale-125 duration-300 shadow-md"/>
+                    <img src={dois} className="w-2/5 m-auto md:w-1/3 hover:scale-125 duration-300 shadow-md"/>
+                    <img src={tres} className="w-2/5 m-auto md:w-1/3 hover:scale-125 duration-300 shadow-md"/>
+                    <img src={quatro} className="w-2/5 m-auto md:w-1/3 hover:scale-125 duration-300 shadow-md"/>
                 </div>
                 <div className="w-full">
                     <iframe
