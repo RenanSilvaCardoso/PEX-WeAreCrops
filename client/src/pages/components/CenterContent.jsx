@@ -5,7 +5,7 @@ import "../../index.css"
 
 export default function CenterContent({children}) {
     return(
-        <main className="w-full flex items-center justify-center centerContent">
+        <main className="centerContent">
             {children}
             <WhatsApp />
         </main>
