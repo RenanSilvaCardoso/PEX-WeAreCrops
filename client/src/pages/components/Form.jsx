@@ -115,15 +115,19 @@ export default function Form() {
                 <label htmlFor="subject" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">
                     *Assunto
                 </label>
-                <input
-                    type="text"
+                <select
                     id="subject"
                     className="block p-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-md focus:ring-primary"
                     value={formValues.subject}
                     onChange={handleChange}
                     required
                     placeholder="Assunto"
-                />
+                >
+                    <option value="Reserva">Reserva</option>
+                    <option value="Sugestão">Sugestão</option>
+                    <option value="Crítica">Crítica</option>
+                    <option value="Trabalhe conosco">Trabalhe conosco</option>
+                </select>
             </div>
             <div className="sm:col-span-2">
                 <label htmlFor="message" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">
