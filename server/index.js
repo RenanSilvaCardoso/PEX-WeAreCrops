@@ -14,7 +14,7 @@ app.get('/api/instagram', async (req, res) => {
 
     try {
         const response = await axios.get(
-            `https://graph.instagram.com/${userId}/media?fields=id,caption,media_type,media_url,permalink,thumbnail_url,timestamp,username&access_token=${accessToken}`
+            `https://graph.instagram.com/${userId}/media?fields=id,caption,media_type,media_url,permalink,thumbnail_url,timestamp&access_token=${accessToken}`
         );
         res.json(response.data);
     } catch (error) {
