@@ -13,6 +13,7 @@ export default {
       },
       animation: {
         'oscilation': 'bounce 3s infinite alternate',
+        'appear': 'appear 1s ease-in'
       },
       keyframes:{
         bounce: {
