@@ -14,19 +14,19 @@ export function Carousel({slides}) {
     }
 
     return (
-        <div class="overflow-hidden relative mt-2 h-2/5 md:h-[450px] shadow-md w-full md:w-9/12 m-auto">
+        <div className="overflow-hidden relative h-2/5 shadow-md w-full md:w-[768px]">
             <div 
-                class={`flex transition ease-out duration-400 no-repeat object-top`}
+                className={`flex transition ease-out duration-400 no-repeat object-top`}
                 style={{transform: `translateX(-${current * 100}%)`}}>
                 {slides.map((s, index) => {
-                    return <img class="md:object-none md:object-bottom" src={s} key={index}/>
+                    return <img className="min-h-full" src={s} key={index}/>
                 })}
             </div>
-            <div class="absolute top-0 h-full w-full justify-between items-center flex text-white px-2 md:px-10 text-xl md:text-3xl">
-                <button onClick={previousSlide} class="bg-primary p-1 rounded-full">
+            <div className="absolute top-0 h-full w-full justify-between items-center flex text-white px-2 text-xl">
+                <button onClick={previousSlide} className="bg-primary p-1 rounded-full">
                     <FaArrowLeft></FaArrowLeft>
                 </button>
-                <button onClick={nextSlide} class="bg-primary p-1 rounded-full">
+                <button onClick={nextSlide} className="bg-primary p-1 rounded-full">
                     <FaArrowRight></FaArrowRight>
                 </button>
             </div>

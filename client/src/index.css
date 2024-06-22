@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.centerContent {
+    /*style={{ height: 'calc(100vh - 250px)' }}*/
+    /*height: calc(100% - 250px);*/
+    height: 100%;
+}
+
+.barn {
+    position: absolute;
+    z-index: 1;
+    width: calc(0.2 * 100vw);
+    bottom: 82px;
+    left: 1rem;
+}
+
+.grass {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: calc(0.025 * 100vw);
+    bottom: 80px;
+    background-image: url("src/assets/img/grama-colorida.svg");
+    background-repeat: repeat-x;
+    background-size: auto;
+}
