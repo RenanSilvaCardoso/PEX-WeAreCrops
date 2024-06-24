@@ -1,10 +1,10 @@
-import React, {useState} from 'react';
+import {useState} from 'react';
 import {Link} from "react-router-dom";
 import logo from '../../assets/img/logo-colorido.svg';
-import {FaInstagram, FaWhatsapp, FaBars} from "react-icons/fa";
+import {FaInstagram, FaBars} from "react-icons/fa";
 import { SiIfood } from "react-icons/si";
 
-function Header() {
+export default function Header() {
     const [menuStatus, setMenuStatus] = useState("closed");
 
     function handleMenuClick(e) {
@@ -57,5 +57,3 @@ function Header() {
         </header>
     )
 }
-
-export default Header;

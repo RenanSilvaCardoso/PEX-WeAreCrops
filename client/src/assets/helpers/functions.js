@@ -1,3 +1,5 @@
+import axios from "axios";
+
 const formatPhoneNumber = (value) => {
     if (!value) return value;
 
@@ -22,7 +24,30 @@ const isFormValid = (formValues) => {
     return Object.values(formValues).every(value => value.trim() !== '');
 };
 
+const api = axios.create({
+    baseURL: "http://localhost:5000/",
+    timeout: 10000,
+    headers: {
+        'Content-Type': 'application/json',
+    },
+});
+
+const fetchInstagramPosts = async () => {
+    try {
+        const response = await api.get("api/instagram");
+
+        // console.log(response.data);
+
+        return response;
+    } catch (error) {
+        // Trate erros aqui
+        console.error('Erro ao buscar dados:', error);
+        throw error;
+    }
+}
+
 export {
     formatPhoneNumber,
-    isFormValid
+    isFormValid,
+    fetchInstagramPosts
 }

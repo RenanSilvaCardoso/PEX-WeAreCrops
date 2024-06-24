@@ -1,14 +1,16 @@
 import {useState} from "react";
 import emailjs from '@emailjs/browser';
 import { formatPhoneNumber, isFormValid } from "../../assets/helpers/functions.js";
+import useGlobalState from "../../store.js";
 
 export default function Form() {
+    const { toggleShow, setText, setStatus } = useGlobalState();
     const [formValues, setFormValues] = useState({
         name: "",
         lastname: "",
         phone: "",
         email: "",
-        subject: "",
+        subject: "Reserva",
         message: ""
     });
 
@@ -34,8 +36,10 @@ export default function Form() {
 
         if (isFormValid(formValues)) {
             emailjs.send('service_atfnc7l', 'template_cfd4myo', templateParams, 'Aid8TpzWgL5JmqlHL')
-                .then((res) => {
-                    console.log('E-mail enviado!', res.status, res.text)
+                .then(() => {
+                    setText("Sucesso! Contato enviado.");
+                    setStatus("success");
+                    toggleShow();
                     setFormValues({
                         name: "",
                         lastname: "",
@@ -54,7 +58,7 @@ export default function Form() {
     }
 
     return (
-        <form className="space-y-4" onSubmit={sendEmail}>
+        <form className="space-y-4 w-full" onSubmit={sendEmail}>
             <div className="space-y-1">
                 <p className="text-xs">*Campos Obrigatórios</p>
 
@@ -94,7 +98,6 @@ export default function Form() {
                     className="shadow-md bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary block w-full p-2"
                     value={formValues.phone}
                     onChange={handleChange}
-                    pattern="(\([0-9]{2}\))\s([9]{1})?([0-9]{4})-([0-9]{4})"
                     required
                     placeholder="(99) 99999-9999"
                 />

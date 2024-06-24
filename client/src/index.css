@@ -8,6 +8,7 @@
     justify-content: center;
     height: 100%;
     width: 100%;
+    overflow: hidden;
 }
 
 .barn {
@@ -27,4 +28,32 @@
     background-image: url("src/assets/img/grama-colorida.svg");
     background-repeat: repeat-x;
     background-size: auto;
+}
+
+.homeContainer {
+    height: 100%;
+    width: 98vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*gap: 5rem;*/
+}
+
+.instagramCardCaption {
+    bottom: 0px;
+    /*offset: ;*/
+}
+
+.instagramCard {
+    min-width: 300px;
+    flex: 0 0 auto;
+    border-radius: 8px;
+}
+
+.instagramCard img,
+.instagramCard video {
+    /*max-width: 100%;*/
+    width: 280px;
+    height: 280px;
+    border-radius: 8px;
 }

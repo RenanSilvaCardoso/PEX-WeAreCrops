@@ -1,8 +1,4 @@
-// import logo from '../../assets/img/logo.png';
-import {Link} from 'react-router-dom';
-import {FaInstagram, FaWhatsapp} from "react-icons/fa";
 import Celeiro from '../../assets/img/celeiro-colorido.svg';
-import Grama from '../../assets/img/grama-colorida.svg';
 import '../../index.css';
 
 export default function Footer() {
